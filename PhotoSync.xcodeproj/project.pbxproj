@@ -34,6 +34,12 @@
 		B958E3A11AA13A0E004A87F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B958E3A91AA13A16004A87F6 /* PhotoSyncTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSyncTests.swift; sourceTree = "<group>"; };
 		B958E3AB1AA13A16004A87F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B6F64A1AA52CEF00331E8F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		B9B6F64C1AA52CEF00331E8F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		B9B6F64D1AA52CEF00331E8F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		B9B6F64F1AA52CEF00331E8F /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		B9B6F6531AA52CEF00331E8F /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 		B958E3691AA138EA004A87F6 = {
 			isa = PBXGroup;
 			children = (
+				B9B6F6481AA52CEF00331E8F /* Configurations */,
 				B958E3971AA13A0E004A87F6 /* PhotoSync */,
 				B958E3A71AA13A16004A87F6 /* PhotoSyncTests */,
 				B958E3731AA138EA004A87F6 /* Products */,
@@ -139,6 +146,51 @@
 				B958E3AB1AA13A16004A87F6 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9B6F6481AA52CEF00331E8F /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6F6491AA52CEF00331E8F /* Base */,
+				B9B6F6511AA52CEF00331E8F /* iOS */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B9B6F6491AA52CEF00331E8F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6F64A1AA52CEF00331E8F /* Common.xcconfig */,
+				B9B6F64B1AA52CEF00331E8F /* Configurations */,
+				B9B6F64E1AA52CEF00331E8F /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B9B6F64B1AA52CEF00331E8F /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6F64C1AA52CEF00331E8F /* Debug.xcconfig */,
+				B9B6F64D1AA52CEF00331E8F /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B9B6F64E1AA52CEF00331E8F /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6F64F1AA52CEF00331E8F /* Application.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		B9B6F6511AA52CEF00331E8F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */,
+				B9B6F6531AA52CEF00331E8F /* iOS-Base.xcconfig */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +329,7 @@
 /* Begin XCBuildConfiguration section */
 		B958E38F1AA138EA004A87F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F64C1AA52CEF00331E8F /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -321,6 +374,7 @@
 		};
 		B958E3901AA138EA004A87F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F64D1AA52CEF00331E8F /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -358,6 +412,7 @@
 		};
 		B958E3921AA138EA004A87F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotoSync/Resources/Info.plist;
@@ -368,6 +423,7 @@
 		};
 		B958E3931AA138EA004A87F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotoSync/Resources/Info.plist;
@@ -378,6 +434,7 @@
 		};
 		B958E3951AA138EA004A87F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F6531AA52CEF00331E8F /* iOS-Base.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -397,6 +454,7 @@
 		};
 		B958E3961AA138EA004A87F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6F6531AA52CEF00331E8F /* iOS-Base.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
