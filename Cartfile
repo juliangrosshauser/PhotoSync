@@ -1,4 +1,2 @@
 github "Alamofire/Alamofire" "xcode-6.3"
 github "ReactiveCocoa/ReactiveCocoa" ~> 2.4
-github "Quick/Quick" ~> 0.3
-github "Quick/Nimble" ~> 0.4
