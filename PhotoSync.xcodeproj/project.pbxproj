@@ -12,6 +12,9 @@
 		B958E3A41AA13A0E004A87F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B958E39E1AA13A0E004A87F6 /* LaunchScreen.xib */; };
 		B958E3A51AA13A0E004A87F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B958E3A01AA13A0E004A87F6 /* Images.xcassets */; };
 		B958E3AC1AA13A16004A87F6 /* PhotoSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958E3A91AA13A16004A87F6 /* PhotoSyncTests.swift */; };
+		B9B9A01B1AA67B2C00F81DB0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B9A01A1AA67B2C00F81DB0 /* Alamofire.framework */; };
+		B9B9A01F1AA67B3200F81DB0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B9A01E1AA67B3200F81DB0 /* ReactiveCocoa.framework */; };
+		B9B9A0211AA67BD100F81DB0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B9A01C1AA67B2F00F81DB0 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		B9B6F64F1AA52CEF00331E8F /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
 		B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
 		B9B6F6531AA52CEF00331E8F /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		B9B9A01A1AA67B2C00F81DB0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B9B9A01C1AA67B2F00F81DB0 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		B9B9A01E1AA67B3200F81DB0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B9A01B1AA67B2C00F81DB0 /* Alamofire.framework in Frameworks */,
+				B9B9A01F1AA67B3200F81DB0 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B9A0211AA67BD100F81DB0 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +76,7 @@
 				B958E3971AA13A0E004A87F6 /* PhotoSync */,
 				B958E3A71AA13A16004A87F6 /* PhotoSyncTests */,
 				B958E3731AA138EA004A87F6 /* Products */,
+				B9B9A0201AA67B4900F81DB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +203,16 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		B9B9A0201AA67B4900F81DB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9B9A01E1AA67B3200F81DB0 /* ReactiveCocoa.framework */,
+				B9B9A01C1AA67B2F00F81DB0 /* Quick.framework */,
+				B9B9A01A1AA67B2C00F81DB0 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +223,7 @@
 				B958E36E1AA138EA004A87F6 /* Sources */,
 				B958E36F1AA138EA004A87F6 /* Frameworks */,
 				B958E3701AA138EA004A87F6 /* Resources */,
+				B9B9A0191AA674AB00F81DB0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -286,6 +307,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9B9A0191AA674AB00F81DB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B958E36E1AA138EA004A87F6 /* Sources */ = {
@@ -415,6 +454,10 @@
 			baseConfigurationReference = B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoSync/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +469,10 @@
 			baseConfigurationReference = B9B6F6521AA52CEF00331E8F /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoSync/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +487,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -460,6 +508,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PhotoSyncTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
