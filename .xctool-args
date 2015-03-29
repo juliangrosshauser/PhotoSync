@@ -1,0 +1,7 @@
+[
+  "-project", "PhotoSync.xcodeproj",
+  "-scheme", "PhotoSync",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
