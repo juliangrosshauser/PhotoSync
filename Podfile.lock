@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (1.1.4)
+  - LlamaKit (0.1.1)
+  - Nimble (0.4.1)
+  - Quick (0.3.0)
+  - ReactiveCocoa (3.0.0-alpha.1):
+    - LlamaKit (= 0.1.1)
+    - ReactiveCocoa/UI (= 3.0.0-alpha.1)
+  - ReactiveCocoa/Core (3.0.0-alpha.1):
+    - LlamaKit (= 0.1.1)
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (3.0.0-alpha.1):
+    - LlamaKit (= 0.1.1)
+  - ReactiveCocoa/UI (3.0.0-alpha.1):
+    - LlamaKit (= 0.1.1)
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - Alamofire (~> 1.1.4)
+  - Nimble (~> 0.4.1)
+  - Quick (~> 0.3.0)
+  - ReactiveCocoa (~> 3.0.0-alpha.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
+  LlamaKit: 25f47a933b6580a6fc159d95adb2e2953c7012e9
+  Nimble: 36913d5c822a29b3ace4113c197c79eb766a3615
+  Quick: 91a8e2ee5bb25eff88ebd0e7553abf728a5ac9bd
+  ReactiveCocoa: 3b5e351bb3ab233d71f0329f36a7400af30d9783
+
+COCOAPODS: 0.36.1
